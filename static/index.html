@@ -20,7 +20,7 @@
 		</div>
 		<div id="tl-right">
 			<form enctype="multipart/form-data" action="/api/upload" method="POST">
-				<input type="file" name="uploadFile"/>
+				<input type="file" name="uploadFile" accept=“application/zip,application/x-zip,application/x-zip-compressed” />
 				<input type="text" name="author" placeholder="输入作者信息"/>
 				<input type="submit" value="上传"/>
 			</form>

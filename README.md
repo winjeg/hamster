@@ -8,10 +8,17 @@ hamster is a tool for serving static sites, especially for `axure` generated sit
 ##  Build（如何构建）
 
 ```bash
+export CGO_ENABLED=1
+export GOOS=linux
+export GOARCH=amd64
 go build .
 ```
-复制conf.yaml 和打包成的可执行文件到服务器上， 和可以执行文件放到一起  
-运行 `./hamster`
+- 复制可执行文件
+- 复制conf.yaml 和打包成的可执行文件到服务器上
+- 创建 uploadDir的目录
+- 创建path对应的目录
+- 加可执行权限 `chmod a+x hamster`
+- 运行 `./hamster`
 
 ## 示例：Demo
 ![image](https://user-images.githubusercontent.com/7270177/66741200-89c74d80-eea7-11e9-948d-7de55da71129.png)
