@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Product Share</title>
+	<link rel="stylesheet" href="/static/index.css" type="text/css"/>
+</head>
+<body>
+<div id="header">
+	<a href="/">
+		<img src="/static/banner.png" align="hamster" style="height: 60px; display: inline-block;"/>
+	</a>
+	<div id="site-title">Axure 产品原型分享网站</div>
+</div>
+
+<div id="content">
+	<div id="head-content">
+		<div id="tl-left">
+			<div class="second-title">网站列表</div>
+		</div>
+		<div id="tl-right">
+			<form enctype="multipart/form-data" action="/api/upload" method="POST">
+				<input type="file" name="uploadFile"/>
+				<input type="text" name="author" placeholder="输入作者信息"/>
+				<input type="submit" value="上传"/>
+			</form>
+		</div>
+	</div>
+	<hr/>
+	<div id="cards-area">
+        {{range .sites}}
+			<a target="_blank" href={{.Mapping}}>
+				<div class="card">
+					<p>作者： {{.Author}}</p>
+					<p>路径： {{.Mapping}}</p>
+					<p>时间： {{.Time}}</p>
+				</div>
+			</a>
+        {{end}}
+	</div>
+</div>
+
+<div id="footer">
+	2019 by winjeg @copyleft
+</div>
+</body>
+</html>

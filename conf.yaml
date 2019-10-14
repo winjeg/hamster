@@ -1,0 +1,5 @@
+web:
+  path: ./products
+  uploadDir: ./uploads
+server:
+  port: :8080
