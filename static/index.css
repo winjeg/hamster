@@ -67,6 +67,7 @@ body, h1, h2 {
 
 #cards-area {
     display: flex;
+    flex-flow:row wrap;
 }
 
 .card {
