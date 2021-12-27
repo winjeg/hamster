@@ -1,36 +1,24 @@
 # hamster
-axure 产品原型分享网站
 
-## 产品介绍 (product introduction)
-hamster 是一个简单的用于托管静态网站的工具， 目前我主要用来托管`axure`的原型文件  
-hamster is a tool for serving static sites, especially for `axure` generated sites 
+之前是专门用来放axure分享网站的， 目前被我用作项目合并存放。
+虽然项目的关注度并不高， 但是如果有任何人有问题， 欢迎issue提问。
 
-##  Build（如何构建）
+You are welcome to ask questions in the issue area.
 
-```bash
-export CGO_ENABLED=1
-export GOOS=linux
-export GOARCH=amd64
-go build .
-```
-- 复制可执行文件
-- 复制conf.yaml 和打包成的可执行文件到服务器上
-- 创建 uploadDir的目录
-- 创建path对应的目录
-- 加可执行权限 `chmod a+x hamster`
-- 运行 `./hamster`
+## axure
+axure 产品分享服务器, 很容易部署, 很容易分享, 简单易用 
+axure exported files share tool, it serves as a simple static web server for users to use.
 
-## 示例：Demo
-![image](https://user-images.githubusercontent.com/7270177/66741200-89c74d80-eea7-11e9-948d-7de55da71129.png)
+[More Docs (阅读更多)](./axure/README.md)
 
-### 如何使用
-![usage](https://user-images.githubusercontent.com/7270177/66741154-63a1ad80-eea7-11e9-8423-23fbea644bcd.gif)
 
-## conf.yaml 配置文件详解
-```yaml
-web:
-  path: ./products  # 放静态文件的目录
-  uploadDir: ./uploads # 上传到服务器的目录
-server:
-  port: :8080 # 监听的端口， listen port
-```
+## 桌面应用 (cross-platform tools written in qt, mainly desktop apps)
+
+- [eye protector](./EyeGuard/README.md)     护眼神器， 定时护眼
+- [clipman](./clipman/README.md)            剪切板神器， 可以跨平台实现剪切板共享
+- [rander](./rander/README.md)              随机数生成器
+
+
+## 自动化脚本工具集 (Shell tools )
+- rrcb 远程命令执行器 (支持密文加密包含server敏感信息的数据，解密并且远程执行)
+- 其他
